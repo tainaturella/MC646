@@ -24,5 +24,12 @@ class OrdSetTest {
     }
 
     // Cobertura de laços
-    // Term Coverage
+    /**
+     * 1. Caso já coberto de termos as quantidades máximas já presentes
+     * 2. Caso em que permitimos que haja  duas execuções do laço de resize
+     * 3. Caso já coberto onde permitimos apenas uma execução do laço de resize
+     * **/
+    // Term Coverage: A etapa inicial onde elencamos a quantidade de testes que seriam realizados ja
+    // foi baseada no método de term coverage
+
 }
