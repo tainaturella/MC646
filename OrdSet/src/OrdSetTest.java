@@ -34,7 +34,7 @@ class OrdSetTest {
 
     @Test
     void b_withMaxElementQtyTest() {
-        final OrdSet ordSet = new OrdSet(8);
+        final OrdSet ordSet = new OrdSet(9);
         try {
             ordSet.add(1);
             ordSet.add(2);
@@ -62,11 +62,55 @@ class OrdSetTest {
 
     @Test
     void c_withMaxResizedTest() {
+        final OrdSet ordSet = new OrdSet(4);
+        try {
+            ordSet.add(1);
+            ordSet.add(2);
+            ordSet.add(3);
+            ordSet.add(4);
+            ordSet.add(5);
+            ordSet.add(6);
+            ordSet.add(7);
+            ordSet.add(8);
+            ordSet.add(9);
+            ordSet.add(10);
+            ordSet.add(11);
+            ordSet.add(12);
+            ordSet.add(13);
+        } catch (OverflowException ignored) {
+        }
+        assertEquals(2, ordSet.getResizedTimes());
+        assertEquals(12, ordSet.getActualSize());
+        assertTrue(ordSet.isOverflow());
 
     }
 
     @Test
     void d_withMaxResizedAndElementQtyTest() {
+        final OrdSet ordSet = new OrdSet(8);
+        try {
+            ordSet.add(1);
+            ordSet.add(2);
+            ordSet.add(3);
+            ordSet.add(4);
+            ordSet.add(5);
+            ordSet.add(6);
+            ordSet.add(7);
+            ordSet.add(8);
+            ordSet.add(9);
+            ordSet.add(10);
+            ordSet.add(11);
+            ordSet.add(12);
+            ordSet.add(13);
+            ordSet.add(14);
+            ordSet.add(15);
+            ordSet.add(16);
+            ordSet.add(17);
+        } catch (OverflowException ignored) {
+        }
+        assertEquals(2, ordSet.getResizedTimes());
+        assertEquals(16, ordSet.getActualSize());
+        assertTrue(ordSet.isOverflow());
     }
 
     // Valores limite
