@@ -116,6 +116,28 @@ class OrdSetTest {
     // Valores limite
     @Test
     void e_withValuesSmallerThanMinimal() {
+        final OrdSet ordSet = new OrdSet(8);
+        try {
+            ordSet.add(1);
+            ordSet.add(2);
+            ordSet.add(3);
+            ordSet.add(4);
+            ordSet.add(5);
+            ordSet.add(6);
+            ordSet.add(7);
+            ordSet.add(8);
+            ordSet.add(9);
+            ordSet.add(10);
+            ordSet.add(11);
+            ordSet.add(12);
+            ordSet.add(13);
+            ordSet.add(14);
+        } catch (OverflowException ignored) {
+        }
+        assertEquals(ordSet.getResizedTimes(), 1);
+        assertEquals(ordSet.getActualSize(), 14);
+        assertFalse(ordSet.isOverflow());
+
     }
 
     // Cobertura de laços
