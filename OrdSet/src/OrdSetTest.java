@@ -55,7 +55,7 @@ class OrdSetTest {
             ordSet.add(17);
         } catch (OverflowException ignored) {
         }
-        assertEquals(2, ordSet.getResizedTimes());
+        assertEquals(1, ordSet.getResizedTimes());
         assertEquals(16, ordSet.getActualSize());
         assertTrue(ordSet.isOverflow());
     }
