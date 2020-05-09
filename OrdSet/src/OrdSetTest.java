@@ -111,14 +111,14 @@ class OrdSetTest {
     @Test
     void e_withValuesSmallerThanMinimal() {
         final OrdSet ordSet = new OrdSet(1);
-        assertEquals(ordSet.getActualSize(), 0);
+        assertEquals(ordSet.getSetSize(), 4);
         assertFalse(ordSet.isOverflow());
     }
 
     @Test
     void f_withValuesGreaterThanMax() {
         final OrdSet ordSet = new OrdSet(17);
-        assertEquals(ordSet.getActualSize(), 16);
+        assertEquals(ordSet.getSetSize(), 16);
         assertTrue(ordSet.isOverflow());
     }
 
