@@ -119,7 +119,7 @@ class OrdSetTest {
     void f_withValuesGreaterThanMax() {
         final OrdSet ordSet = new OrdSet(17);
         assertEquals(ordSet.getActualSize(), 16);
-        assertFalse(ordSet.isOverflow());
+        assertTrue(ordSet.isOverflow());
     }
 
     @Test
@@ -145,14 +145,14 @@ class OrdSetTest {
             ordSet.add(17);
         } catch (OverflowException ignored) {
         }
-        assertEquals(ordSet.getResizedTimes(), 2);
+        assertEquals(ordSet.getResizedTimes(), 1);
         assertEquals(ordSet.getActualSize(), 16);
         assertTrue(ordSet.isOverflow());
     }
 
 
     @Test
-    void g_ResizeOverflowConditionTest() {
+    void h_ResizeOverflowConditionTest() {
         final OrdSet ordSet = new OrdSet(4);
         try {
             ordSet.add(1);
