@@ -173,6 +173,15 @@ public class ElevatorSystemTest {
         assertTrue(e.getMotorMoving());
     }
 
+    @Test
+    public void h_floorOutOfBounsd(){
+        ElevatorGroup group = ElevatorGroup.getGroup(1,4);
+        group.startGroup();
+        FloorInterface f = group.getFloorInterface(1);
+        Elevator e = f.requestUp(22);
+        assertNull(e);
+    }
+
     private void resetGroup(ElevatorGroup group){
         for(int i=0; i<group.numElevators; i++){
             group.e[i].addStop(0, true);
