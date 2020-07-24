@@ -50,10 +50,15 @@ public class OrdSet {
      */
     private int defSetSize(int n) {
         int mod;
+        // Mutantes do tipo ROR ( ==, >=, !=, >, <)
         if (n <= min_set_size) return min_set_size;
+        // Mutantes do tipo ROR ( ==, <=, !=)
         if (n >= max_set_size) return max_set_size;
+        // Mutantes do tipo AOR (*,+,-)
         mod = n / min_set_size;
+        // Mutantes do tipo AOR (/,+,-) ou ROR (!=, >,<, >=, <=)
         if (mod * min_set_size == n) return n;
+        // Mutantes do tipo AOR (/,*,-) ou
         else return (mod + 1) * min_set_size;
     }
 
@@ -394,6 +399,7 @@ public class OrdSet {
      * @param s2 The second set to perform the union on.
      * @return The union of the two sets, "this" and s2.
      */
+    //ACM (private)
     public OrdSet union(OrdSet s2) {
         int[] set1 = this.getSetArray();
         int[] set2 = s2.getSetArray();
