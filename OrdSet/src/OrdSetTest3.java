@@ -2,12 +2,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class OrdSetTest {
+class OrdSetTest3 {
 
     // Casos de teste elencados na questao 6
     @Test
     void a_withMaxElementQtyTest() {
-        final OrdSet ordSet = new OrdSet(12);
+        final OrdSet3 ordSet = new OrdSet3(12);
         try {
             ordSet.add(1);
             ordSet.add(2);
@@ -34,7 +34,7 @@ class OrdSetTest {
 
     @Test
     void b_withMaxResizedTest() {
-        final OrdSet ordSet = new OrdSet(8);
+        final OrdSet3 ordSet = new OrdSet3(8);
         try {
             ordSet.add(1);
             ordSet.add(2);
@@ -61,7 +61,7 @@ class OrdSetTest {
 
     @Test
     void c_withMaxResizedAndElementQtyTest() {
-        final OrdSet ordSet = new OrdSet(8);
+        final OrdSet3 ordSet = new OrdSet3(8);
         try {
             ordSet.add(1);
             ordSet.add(2);
@@ -88,7 +88,7 @@ class OrdSetTest {
 
     @Test
     void d_withValuesSmallerThanMax() {
-        final OrdSet ordSet = new OrdSet(8);
+        final OrdSet3 ordSet = new OrdSet3(8);
         try {
             ordSet.add(1);
             ordSet.add(2);
@@ -110,21 +110,21 @@ class OrdSetTest {
     // Valores limite
     @Test
     void e_withValuesSmallerThanMinimal() {
-        final OrdSet ordSet = new OrdSet(1);
+        final OrdSet3 ordSet = new OrdSet3(1);
         assertEquals(ordSet.getSetSize(), 4);
         assertFalse(ordSet.isOverflow());
     }
 
     @Test
     void f_withValuesGreaterThanMax() {
-        final OrdSet ordSet = new OrdSet(17);
+        final OrdSet3 ordSet = new OrdSet3(17);
         assertEquals(ordSet.getSetSize(), 16);
         assertFalse(ordSet.isOverflow());
     }
 
     @Test
     void g_SizeOverflowConditionTest() {
-        final OrdSet ordSet = new OrdSet(12);
+        final OrdSet3 ordSet = new OrdSet3(12);
         try {
             ordSet.add(1);
             ordSet.add(2);
@@ -153,7 +153,7 @@ class OrdSetTest {
 
     @Test
     void h_ResizeOverflowConditionTest() {
-        final OrdSet ordSet = new OrdSet(4);
+        final OrdSet3 ordSet = new OrdSet3(4);
         try {
             ordSet.add(1);
             ordSet.add(2);
