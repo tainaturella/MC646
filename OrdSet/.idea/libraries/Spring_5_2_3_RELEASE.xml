@@ -19,8 +19,12 @@
       <root url="jar://$PROJECT_DIR$/lib/spring-test-5.2.3.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-jms-5.2.3.RELEASE.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/spring-jdbc-5.2.3.RELEASE.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/graphwalker-core-4.2.0.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/graphwalker-java-4.2.0.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/graphwalker-java-4.2.0.jar!/" />
+    </SOURCES>
   </library>
 </component>
